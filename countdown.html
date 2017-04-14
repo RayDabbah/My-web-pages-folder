@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>שעון ביטול זמן</title>
+</head>
+<style>
+    * {
+        background-color: #97D897;
+    }
+    #startstop {
+        width: 65px;
+        justify-content: center;
+        display: inline-block;
+    }
+    input[type=number] {
+        width: 50px;
+        height: 50px;
+        background-color: #ddd;
+        margin-left: 20%;
+        color: #151612;
+        font-size: 2em;
+    }
+    h1{
+        text-align: center;
+        color: #123321;
+        font-size: 4em;
+    }
+    #inputarea {
+        margin: auto;
+        width: 21%;
+       /* padding: 25;*/
+    }
+    #enternumber {
+        color: red;
+        font-size: 1.5em;
+        height: 75px;
+    }
+    trans {
+        color: transparent;
+    }
+    @keyframes example {
+        from {color: red; }
+        to {color: yellow;}
+    }
+    .colors {
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: 15;
+        animation-timing-function: linear;
+    }
+    
+</style>
+<body>
+<h1>Enter time and click Start to start the countdown clock.</h1>
+<div id="inputarea"><button id="button">Start</button> &nbsp <div id="startstop"><button id="pause">Pause</button><button id="cont">Continue</button></div> &nbsp
+<button id="rest">Reset</button> <br><br>
+<input type="number" id="begin" min="0"><br>
+<p id="enternumber"></p></div>
+<div><h1 id="tick">00:00</h1></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+var begin,
+pause = document.getElementById('pause'),
+rest = document.getElementById('rest'),
+button = document.getElementById('button'),
+cont = document.getElementById('cont'),
+  secLeft; 
+var tick = document.getElementById('tick');
+ var intervalHandle = null;
+console.log('Seconds ' +secLeft +'minutes: ');
+//start countdown:
+rest.disabled = true;
+pause.disabled = true;
+cont.style.display = 'none';
+function countdown() {
+begin = document.getElementById('begin').value;
+if (begin > 0) {
+secLeft = begin * 60; console.log(begin);
+rest.disabled = false;
+pause.disabled = false;
+button.disabled = true;
+document.getElementById('begin').disabled = true;
+intervalHandle = setInterval(ticking, 1000);
+} else {
+    //reset and error if NaN:
+     document.getElementById('begin').value = '';
+    console.log(begin);
+    document.getElementById('enternumber').innerHTML= 'Please enter a valid number.';
+       }
+}
+
+function ticking() {
+ minLeft = Math.floor(secLeft /60);
+ var secOutput = secLeft - (minLeft * 60);
+  
+   tick.innerHTML = ('0' + minLeft).substr(-2) + ':' + ('0' + secOutput).substr(-2);
+   secLeft = secLeft -1;
+   if (secLeft <= 29) {
+    //tick.setAttribute("class", "colors");
+    tick.style.color = 'red';
+   }
+   console.log('Seconds ' + secLeft + ' minutes: ' + minLeft + ' output: ' + secOutput);
+   if (secLeft <= -1) {
+   clearInterval(intervalHandle);
+    rest.disabled = true;
+pause.disabled = true;
+button.disabled = false;
+document.getElementById('begin').disabled = false;
+   tick.innerHTML = '00:00<br>Time is up!!';
+   tick.style.color = '';
+    }
+    }
+       
+document.getElementById('rest').addEventListener('click', function(){
+     clearInterval(intervalHandle);
+     tick.style.color = '';
+     rest.disabled = true;
+pause.disabled = true;
+button.disabled = false;
+document.getElementById('begin').disabled = false;
+
+   tick.innerHTML = '00:00';
+   });
+  console.log('int: ' + intervalHandle);
+ document.getElementById('pause').addEventListener('click', function() {
+  clearInterval(intervalHandle);
+  intervalHandle = null;
+  console.log('pause int: ' + intervalHandle);
+  cont.style.display = '';
+  pause.style.display = 'none';
+   });
+    document.getElementById('cont').addEventListener('click', function() {
+        if (intervalHandle === null) {
+     intervalHandle = setInterval(ticking, 1000);  console.log('int: cont ' + intervalHandle);
+     pause.style.display = '';
+     cont.style.display = 'none';
+        }
+   });
+
+button.addEventListener('click', function(){
+    countdown();
+     console.log('begin: '/*'Seconds: ' +secLeft + 'start value: ' +*/ + begin +' '/* + ' minutes: ' + minLeft*/);
+});
+    }());
+</script>
+</body>
+</html>
