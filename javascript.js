@@ -68,8 +68,8 @@ pix.onclick = function () {
   
 //console.log(pixa[pixIndex]);
 var uploadFile = document.getElementById('upload'),
-error = document.getElementById('error'),
-myRE =  /^.+(.wav|.WAV|.mp3|.MP3)$/;
+error = document.getElementById('error');
+/*myRE =  /^.+(.wav|.WAV|.mp3|.MP3)$/;*/
 error.style.display = 'none';
 uploadFile.addEventListener('change', mp3);
 function mp3() {
