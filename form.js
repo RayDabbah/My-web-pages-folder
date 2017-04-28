@@ -5,17 +5,19 @@ function drop() {
 	thin.classList.toggle("show");
 }
 var lick = document.getElementById("button");
-lick.onclick = function() {
+lick.addEventListener('click', function(e) {
 	drop();
-};
-/*window.addEventListener('click', function(event) {
+	e.stopPropagation();
+}, false);
+document.addEventListener('click', clickOutOf);
+function clickOutOf(event) {
   if (event.target === ('button')) {
     thin.classList.toggle('show');
   }    else {
       thin.classList.remove('show');
    }
    console.log(event.target);
-  });*/
+  }
 var first = document.getElementById('first'),
 	last = document.getElementById('last'),
 	pass = document.getElementById('password'),
@@ -130,7 +132,7 @@ picture.style.top = '175px';
 function setPosition(left) {
 	leftPosition += left;
 	picture.style.left = leftPosition + 'px';
-	console.log(picture.style.left);
+	//console.log(picture.style.left);
 }
 
 function animate() {
