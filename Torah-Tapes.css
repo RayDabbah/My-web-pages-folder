@@ -105,6 +105,13 @@ body {
    /* border: solid black 1px;*/
     cursor: pointer;
 }
+.shiur #playing {
+   background-color: #45F745;
+   color: #111;
+}
+.shiur #paused {
+    background-color: #565cde;
+}
 a:link {
     color: #bbb;
     font-weight: bolder;
