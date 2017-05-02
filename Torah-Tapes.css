@@ -102,7 +102,7 @@ body {
 #player li {
    margin-bottom: -1px;
     background-color: #fef;
-   /* border: solid black 1px;*/
+  padding: 8px;
     cursor: pointer;
 }
 .shiur #playing {
