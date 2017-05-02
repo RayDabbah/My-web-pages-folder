@@ -1,11 +1,23 @@
-var thin=document.getElementById("dropdown");
-function drop () {
-  thin.classList.toggle("show");
+var thin = document.getElementById("dropdown");
+
+function drop() {
+	thin.classList.toggle("show");
 }
-var lick=document.getElementById("button");
-lick.onclick = function() {
-  drop();
-}
+var lick = document.getElementById("button");
+lick.addEventListener('click', function(e) {
+	drop();
+	e.stopPropagation();
+}, false);
+document.addEventListener('click', clickOutOf);
+function clickOutOf(event) {
+  if (event.target === ('button')) {
+    thin.classList.toggle('show');
+  }    else {
+      thin.classList.remove('show');
+   }
+   console.log(event.target);
+  }
+
 
 function initMap() {
     var ltLng= {lat: 40.0999709, lng: -74.1713087},
