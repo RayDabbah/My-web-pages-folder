@@ -94,6 +94,17 @@ body {
     background-color: #E8EEEF;
     
                 }
+.whole ul #player    {
+    
+    border: 1px solid purple;
+    border-radius: 100%;
+    }
+#player li {
+   margin-bottom: -1px;
+    background-color: #fef;
+   /* border: solid black 1px;*/
+    cursor: pointer;
+}
 a:link {
     color: #bbb;
     font-weight: bolder;

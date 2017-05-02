@@ -9,7 +9,7 @@ console.log('length: ' + pixa.length);
 /*for (var pixa; pixIndex <= pixa.length; pixIndex++) {
    setTimeout(changeImage,1200); console.log(pixa[pixIndex]);
 }*/
-while (pixIndex < (pixa.length)) {
+while (pixIndex < (pixa.lengthgit)) {
     changeImage();
  setTimeout(changeImage,1200);
  pixIndex++;
