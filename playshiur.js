@@ -9,7 +9,6 @@ document.getElementById('audioplayer').addEventListener('ended', endPlayback, fa
             e.target.id = 'playing';
             myPlayer.currentTime = holdPlace;
             myPlayer.play();
-            console.log('Continue id: ' + e.target.id);
         } else if (e.target.id !== ('playing') || !('paused')) {
             if (document.querySelector('#paused')) {
             document.querySelector('#paused').id = '';
@@ -26,12 +25,10 @@ document.getElementById('audioplayer').addEventListener('ended', endPlayback, fa
      player.setAttribute('src', '');
     player.setAttribute('src', playSource);
     myPlayer.play();
-    console.log(e.target.id);
         } else if (e.target.id === 'playing') {
             myPlayer.pause();
             e.target.id = 'paused';
              holdPlace = myPlayer.currentTime;
-             console.log('Pause id: ' + e.target.id);
         } 
 function endPlayback() {
    e.target.id = '';

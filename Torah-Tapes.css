@@ -100,6 +100,8 @@ body {
     border-radius: 100%;
     }
 #player li {
+    font-family:cursive, sans-serif;
+    border-top: 1px black solid;
    margin-bottom: -1px;
     background-color: #fef;
   padding: 8px;
