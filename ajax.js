@@ -29,7 +29,8 @@ function AJAX() {
 	var	conditions = response.weather[0].description,
 		temperatureC = response.main.temp - 273.15,
 		tempF = Math.floor(temperatureC * 1.8 + 32),
-		windSpeed = response.wind.speed;
+		wind = response.wind.speed * 0.621371;
+		windSpeed = wind.toFixed(2);
 		weatherBox.innerHTML = '<p> Temperature ' + tempF + '&#176; F</p><br><p>' + conditions + '</p><br><p>Wind Speed: ' + windSpeed + ' MPH</p>';
 	}
 	function hideElement() {
