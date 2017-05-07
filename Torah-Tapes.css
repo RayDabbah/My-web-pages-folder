@@ -392,3 +392,13 @@ table {
         height: 50px;
         text-align: center;
     }
+    #weather {
+        width: 350px;
+        margin: 50px auto;
+       
+    }
+    #weather p {
+       text-align: center;
+       text-transform: capitalize;
+       color: #2341f1;
+    }
