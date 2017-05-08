@@ -100,10 +100,19 @@ body {
     border-radius: 100%;
     }
 #player li {
+    font-family:cursive, sans-serif;
+    border-top: 1px black solid;
    margin-bottom: -1px;
     background-color: #fef;
-   /* border: solid black 1px;*/
+  padding: 8px;
     cursor: pointer;
+}
+.shiur #playing {
+   background-color: #45F745;
+   color: #111;
+}
+.shiur #paused {
+    background-color: #565cde;
 }
 a:link {
     color: #bbb;
@@ -382,4 +391,14 @@ table {
         font-size: .75em;
         height: 50px;
         text-align: center;
+    }
+    #weather {
+        width: 350px;
+        margin: 50px auto;
+       
+    }
+    #weather p {
+       text-align: center;
+       text-transform: capitalize;
+       color: #2341f1;
     }
