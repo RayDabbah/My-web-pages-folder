@@ -44,3 +44,5 @@ function initMap() {
           infowindow.open(map, marker);
         });     
       }
+	  console.log(initMap);
+	  
