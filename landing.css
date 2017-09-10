@@ -21,7 +21,7 @@ h1{
     margin-bottom: 25px;
 }
 img{
-    box-shadow: 2px 2px 2px gray;
+    box-shadow: 4px 4px 2px rgba(34, 49, 39, 0.62);
     width: 100%;
     border: 9px solid #000;
     border-radius: 100em;
@@ -63,7 +63,7 @@ a{
 a:hover img{
     text-decoration: none;
     transform: scale(1.3) rotateZ(-360deg);
-    box-shadow: 8px 8px 8px gray;
+    box-shadow: 8px 8px 8px rgba(34, 49, 39, 0.62);
 }
 .linkText{
     margin-top: 2em;
