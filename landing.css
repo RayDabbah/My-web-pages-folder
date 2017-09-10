@@ -1,11 +1,9 @@
 *{
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
-    /* background: linear-gradient(#123, 456, 789) */
 }
 html {
     min-height: 100%;
-    /* min-width: 100%; */
     overflow-x: hidden;
     background: linear-gradient( 45deg, #ffd, rgba(47, 224, 224, 0.59),
     #ffd);
@@ -49,16 +47,16 @@ img{
     /* height:  */
 }
 #first{
-    animation: 3s ease-in-out 0s 1 slideInFromRight;
+    animation: 4s ease-in-out 0s 1 slideInFromRight;
 }
 #second{
-    animation: 2500ms ease-in-out 0s 1 slideInFromOnBottom;
+    animation: 3500ms ease-in-out 0s 1 slideInFromOnBottom;
 }
 #third{
-    animation: 2250ms ease-in-out 0s 1 slideInFromOnTop;
+    animation: 3250ms ease-in-out 0s 1 slideInFromOnTop;
 }
 #fourth{
-    animation: 2s ease-in-out 0s 1 slideInFromLeft;
+    animation: 3s ease-in-out 0s 1 slideInFromLeft;
 }
 a{
     position: relative;
@@ -78,6 +76,7 @@ a:hover img{
     font-size: 1.3em;
     color: #000;
     font-weight: 900;
+    text-shadow: 3px 3px 3px #b45891;
 }
 .linkText:hover{
     color: #DA1919;
@@ -216,7 +215,7 @@ a:hover img{
     30%{
         transform: rotateX(7920deg)
     }
-    50%{
+    40%{
         transform: rotateX(8540deg)
     }
     100%{
