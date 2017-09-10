@@ -22,6 +22,9 @@ h1{
     font-family: 'Dosis', sans-serif;
     margin-bottom: 25px;
 }
+#siteName{
+    animation: 1s linear 0s 1 spinIn;
+}
 img{
     box-shadow: 4px 4px 2px rgba(34, 49, 39, 0.62);
     width: 100%;
@@ -203,5 +206,13 @@ a:hover img{
     }
     100%{
         margin-left: -1000px;
+    }
+}
+@keyframes spinIn {
+    0%{
+        transform: rotateX(0deg)
+    }
+    100%{
+        transform: rotateX(2160deg)
     }
 }
