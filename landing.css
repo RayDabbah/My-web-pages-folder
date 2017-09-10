@@ -3,6 +3,15 @@
     font-family: 'Josefin Sans', sans-serif;
     /* background: linear-gradient(#123, 456, 789) */
 }
+html {
+    min-height: 100%;
+    background: linear-gradient(
+      45deg,
+      rgba(242, 159, 243, 0.3),
+      rgba(184, 161, 204, 0.8),
+      #7cba84
+    );
+}  
 h1{
     animation: 1s linear 0s 1 slideInFromTop;
     width: 50%;
@@ -22,6 +31,7 @@ img{
     transition: 500ms;
 }
 #main{
+    margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -32,6 +42,18 @@ img{
     /* margin: 4% auto; */
     width: 250px;
     /* height:  */
+}
+#first{
+    animation: 2s ease-in-out 0s 1 slideInFromLeft;
+}
+#second{
+    animation: 2s ease-in-out 0s 1 slideInFromOnTop;
+}
+#third{
+    animation: 2s ease-in-out 0s 1 slideInFromOnBottom;
+}
+#fourth{
+    animation: 2s ease-in-out 0s 1 slideInFromRight;
 }
 a{
     position: relative;
@@ -55,15 +77,63 @@ img:hover{
         transform: translateX(-100%) translateY(-100%);
     }
     33% {
-        transform: translate(-25%, 0)
+        transform: translate(-25%, 0);
     }
     66%{
-        transform: translate(-5%, -25%)
+        transform: translate(-5%, -25%);
     }
-    /* 75%{
-        transform: translate()
-    } */
+    70%{
+        transform: translate(-4%, -20%);
+    }
+    75%{
+        transform: translate(-3%, -15%);
+    }
     100% {
         transform: translateX(0) translateY(0);
     }
   }
+
+  @keyframes slideInFromLeft{
+    0% {
+        transform: translate(-150%, -150%);
+    }
+    50% {
+        transform: translate(-150%, -150%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+  @keyframes slideInFromRight{
+    0% {
+        transform: translate(150%, 150%);
+    }
+    50% {
+        transform: translate(150%, 150%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+  @keyframes slideInFromOnTop{
+    0% {
+        transform: translateX(-250%);
+    }
+    50% {
+        transform: translateX(-250%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+  @keyframes slideInFromOnBottom{
+    0% {
+        transform:translateY(250%);
+    }
+    50% {
+        transform:translateY(250%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
