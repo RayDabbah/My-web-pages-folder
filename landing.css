@@ -5,19 +5,20 @@
 }
 html {
     min-height: 100%;
+    /* min-width: 100%; */
+    overflow-x: hidden;
     background: linear-gradient( 45deg, #ffd, rgba(47, 224, 224, 0.59),
     #ffd);
-}  
+} 
 h1{
+    white-space: wrap;
     position: relative;
     z-index: 2;
     color: #182322;
     text-shadow: 7px 5px 6px  blue;
     animation: 1s linear 0s 1 slideInFromTop;
-    width: 50%;
     text-align: center;
     margin: 0 auto;
-    /* font-family: 'Noto Serif', serif; */
     font-size: 4.5em;
     font-family: 'Dosis', sans-serif;
     margin-bottom: 25px;
@@ -48,16 +49,16 @@ img{
     /* height:  */
 }
 #first{
-    animation: 2s ease-in-out 0s 1 slideInFromLeft;
+    animation: 3s ease-in-out 0s 1 slideInFromRight;
 }
 #second{
-    animation: 2s ease-in-out 0s 1 slideInFromOnTop;
+    animation: 2500ms ease-in-out 0s 1 slideInFromOnBottom;
 }
 #third{
-    animation: 2s ease-in-out 0s 1 slideInFromOnBottom;
+    animation: 2250ms ease-in-out 0s 1 slideInFromOnTop;
 }
 #fourth{
-    animation: 2s ease-in-out 0s 1 slideInFromRight;
+    animation: 2s ease-in-out 0s 1 slideInFromLeft;
 }
 a{
     position: relative;
@@ -104,10 +105,10 @@ a:hover img{
 
   @keyframes slideInFromLeft{
     0% {
-        transform: translate(-150%, -150%);
+        transform: translate(-250%, -250%);
     }
     50% {
-        transform: translate(-150%, -150%);
+        transform: translate(-250%, -250%);
     }
     100% {
         transform: translate(0);
@@ -115,10 +116,10 @@ a:hover img{
 }
   @keyframes slideInFromRight{
     0% {
-        transform: translate(150%, -150%);
+        transform: translate(250%, -250%);
     }
     50% {
-        transform: translate(150%, -250%);
+        transform: translate(250%, -250%);
     }
     100% {
         transform: translate(0);
