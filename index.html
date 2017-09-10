@@ -60,15 +60,16 @@
     <div class="cloud x3"></div>
     <div class="cloud x4"></div>
     <script>
-        Array.from(document.querySelectorAll('a')).forEach(link =>{
-            link.addEventListener('click', e =>{
-                e.preventDefault();
-                setTimeout(function(){
-                    console.log(e)
-                    e.defaultPrevented =  false;
-                }, 2000)
-            })
-        })
+        // Array.from(document.querySelectorAll('a')).forEach(link =>{
+        //     link.addEventListener('click', e =>{
+        //         e.preventDefault();
+        //         setTimeout(link.addEventListener('click', function (e){
+        //             console.log(e.defaultPrevented)
+        //             return true;
+        //         }), 2000)
+        //             console.log(e.defaultPrevented)
+        //     })
+        // })
     </script>
 </body>
 
