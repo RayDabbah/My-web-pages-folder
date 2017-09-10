@@ -186,8 +186,8 @@ a:hover img{
 }
 .x2{
     transform: scale(1.2);
-    top: -200px;
-     left: 925px;
+    top: -600px;
+     left: 525px;
     animation: 25s linear 0s infinite movecloud;
 }
 .x3{
