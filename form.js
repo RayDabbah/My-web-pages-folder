@@ -94,7 +94,7 @@ function figure() {
 }
 //countdown clock
 function countdown() {
-	var timeLeft = new Date(2017, 7).getTime() - new Date().getTime();
+	var timeLeft = new Date(2017, 10).getTime() - new Date().getTime();
 	//=parseInt(t-today, 10);
 	var second = Math.floor((timeLeft / 1000) % 60),
 		seconds = ('0' + second).substr(-2),
