@@ -63,14 +63,16 @@
     <div class="cloud x4"></div>
     <script>
         console.log(location)
-        let links = Array.from(document.querySelectorAll('a'));
-        links.forEach(link => {
-            link.addEventListener('click', e=>{
+        const links = Array.from(document.querySelectorAll('a'));
+        const pictures = document.querySelectorAll('img');
+        links.forEach((link, i) => {
+            link.addEventListener('click', e => {
                 e.preventDefault();
-                setTimeout(()=>{
+                pictures[i].className = 'clicked';
+                setTimeout(() => {
                     console.log(link.href)
                     location.href = link.href;
-                },1500)
+                }, 4000)
             });
         })
     </script>
