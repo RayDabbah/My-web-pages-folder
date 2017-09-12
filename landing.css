@@ -89,7 +89,7 @@ a:hover img{
     font-weight: 900;
     text-shadow: 3px 3px 3px #b45891;
 }
-.linkText:hover{
+a:hover .linkText{
     color: #DA1919;
 }
 @keyframes slideInFromTop {
