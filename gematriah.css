@@ -13,6 +13,7 @@ body{
     display: none;
 }
 #compare{
+    border-radius: 5px;
     display: block;
     margin: 0 auto;
     height: 4em;
