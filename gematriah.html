@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=David+Libre" rel="stylesheet">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqgei3_FNkXwj4b_5zXzYOyy4XAZ8BRSkpT6iYijWQGwLJ67It5g">
+    <link rel="stylesheet" type="text/css" href="gematriah.css">
+    <title>גמטריא Calculator</title>
 </head>
+
 <body>
-<textarea id="input1"></textarea>    
-<p id="result1"></p>
-<script src="gematriah.js"></script>
+    <h1>גמטריא Calculator</h1>
+    <button tabindex="2" id="compare">Compare with another גמטריא!</button>
+    <main>
+        <div id="second-input">
+            <p class="enter-message">Enter your גמטריא to compare here!</p>
+            <textarea tabindex="3" id="input2"></textarea>
+            <p class="result" id="result2"></p>
+        </div>
+        <div id="initial-input">
+            <p class="enter-message">Enter your גמטריא here!</p>
+            <textarea tabindex="1" id="input1"></textarea>
+            <p class="result" id="result1"></p>
+        </div>
+    </main>
+        <h2 id="result-difference"></h2>
+        <script src="gematriah.js"></script>
 </body>
+
 </html>
