@@ -13,6 +13,7 @@ body{
     display: none;
 }
 #compare{
+    /* float: right; */
     border-radius: 5px;
     display: block;
     margin: 0 auto;
@@ -50,8 +51,8 @@ textarea{
     color: black;
     padding: 1em;
     font-size: 2em;
-    /* font-weight: bold; */
     direction: rtl;
+    /* box-shadow: 3px 3px 3px gray; */
 }
 .enter-message{
     font-size: 1.3em;
