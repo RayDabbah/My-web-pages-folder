@@ -19,6 +19,8 @@ const endLetters = {
 }
 calculate(input1, result1, 'input');
 calculate(input2, result2, 'input');
+input1.addEventListener('input', difference);
+input2.addEventListener('input', difference);
 compareButton.addEventListener('click', () => {
     if (toggleDisplay == false) {
         secondInput.style.display = 'block';
@@ -33,8 +35,6 @@ compareButton.addEventListener('click', () => {
     }
 });
 
-input1.addEventListener('input', difference);
-input2.addEventListener('input', difference);
 // functions
 
 function calculate(input, result, event) {
@@ -55,12 +55,15 @@ function calculateSum(input) {
 function difference(){
     if(toggleDisplay== true) resultDifference.textContent = Math.abs(result1.textContent - result2.textContent);
     if(toggleDisplay == false) resultDifference.textContent = '';
-    if((result1.textContent == result2.textContent) && !result1.textContent == 0){
+    if((result1.textContent == result2.textContent) && result1.textContent != "0"){
         resultDifference.innerHTML = '&#10004';
         resultDifference.style.color = 'green';
         resultDifference.style.fontSize = '4em';
         result1.style.color = 'green';
         result2.style.color = 'green';
+    }
+    if(resultDifference.textContent == "0"){
+        resultDifference.textContent = '';
     }
     if(parseInt(result1.textContent)> parseInt(result2.textContent)){
         resultDifference.style.color = 'red';

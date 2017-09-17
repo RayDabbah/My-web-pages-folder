@@ -28,10 +28,13 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
+    flex: 1;
 }
 div{
-    width: 25%;
+    flex: 1;
+    width: 350px;
+    max-width: 500px;
     background-color: transparent;
 }
 textarea{
