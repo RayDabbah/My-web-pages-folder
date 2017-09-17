@@ -26,6 +26,14 @@ misparNum.forEach((number, i) => {
     return misparK[Object.keys(letters)[i]] = misparNum[i];
 });
 
+const calcAtBash = {};
+const reverse = Object.values(letters).reverse();
+reverse.forEach((number, i) => {
+return calcAtBash[Object.keys(letters)[i]] = reverse[i];
+});
+// console.log(calcAtBash);
+
+
 let calculateLetters = letters;
 const endLetters = {
     ן: calculateLetters.נ,
@@ -36,17 +44,17 @@ const endLetters = {
 }
 
 nav.addEventListener('click', () => {
-    if(misK.checked == true){
+    if (misK.checked == true) {
         calculateLetters = misparK;
-    }if(regular.checked == true){
+    } if (regular.checked == true) {
         calculateLetters = letters;
+    }if (atBash.checked == true) {
+        calculateLetters = calcAtBash;
     }
     calculate(input1, result1, 'input');
     result1.innerHTML = calculateSum(input1);
     result2.innerHTML = calculateSum(input2);
 })
-// calculate(nav, result1, 'change');
-// calculate(nav, result2, 'change');
 calculate(input1, result1, 'input');
 calculate(input2, result2, 'input');
 input1.addEventListener('input', difference);
@@ -108,9 +116,3 @@ function difference() {
         result2.style.color = 'green';
     }
 }
-
-// function changeMethod(event, element){
-//     element.addEventListener(event, ()=>{
-//         if
-//     })
-// }
