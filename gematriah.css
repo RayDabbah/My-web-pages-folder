@@ -15,9 +15,12 @@ body{
 #compare{
     display: block;
     margin: 0 auto;
-    height: 3em;
-    width: 15em;
+    height: 4em;
+    width: 18em;
     background-color: #222;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
 main{
