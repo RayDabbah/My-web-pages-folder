@@ -29,28 +29,32 @@ misparNum.forEach((number, i) => {
 const calcAtBash = {};
 const reverse = Object.values(letters).reverse();
 reverse.forEach((number, i) => {
-return calcAtBash[Object.keys(letters)[i]] = reverse[i];
+    return calcAtBash[Object.keys(letters)[i]] = reverse[i];
 });
 // console.log(calcAtBash);
 
 
 let calculateLetters = letters;
-const endLetters = {
-    ן: calculateLetters.נ,
-    ם: calculateLetters.מ,
-    ץ: calculateLetters.צ,
-    ף: calculateLetters.פ,
-    ך: calculateLetters.כ,
-}
+const endLetters = {}
+endLetters.ם = calculateLetters.מ;
+endLetters.ץ = calculateLetters.צ;
+endLetters.ף = calculateLetters.פ;
+endLetters.ך = calculateLetters.כ;
+endLetters.ן = calculateLetters.נ;
 
 nav.addEventListener('click', () => {
     if (misK.checked == true) {
         calculateLetters = misparK;
     } if (regular.checked == true) {
         calculateLetters = letters;
-    }if (atBash.checked == true) {
+    } if (atBash.checked == true) {
         calculateLetters = calcAtBash;
     }
+    endLetters.ם = calculateLetters.מ;
+    endLetters.ץ = calculateLetters.צ;
+    endLetters.ף = calculateLetters.פ;
+    endLetters.ך = calculateLetters.כ;
+    endLetters.ן = calculateLetters.נ;
     calculate(input1, result1, 'input');
     result1.innerHTML = calculateSum(input1);
     result2.innerHTML = calculateSum(input2);
