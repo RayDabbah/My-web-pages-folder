@@ -58,6 +58,7 @@ nav.addEventListener('click', () => {
     calculate(input1, result1, 'input');
     result1.innerHTML = calculateSum(input1);
     result2.innerHTML = calculateSum(input2);
+    difference();
 })
 calculate(input1, result1, 'input');
 calculate(input2, result2, 'input');
