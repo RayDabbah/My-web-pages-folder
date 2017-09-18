@@ -74,6 +74,7 @@ compareButton.addEventListener('click', () => {
         resultDifference.style.display = 'none';
         secondInput.style.display = 'none';
         compareButton.textContent = 'Compare with another גמטריא!'
+	    result1.style.color = 'white';
         toggleDisplay = false;
     }
 });
@@ -96,7 +97,8 @@ function calculateSum(input) {
 }
 
 function difference() {
-    if (toggleDisplay == true) resultDifference.textContent = Math.abs(result1.textContent - result2.textContent);
+   if(toggleDisplay == false) return; 
+	if (toggleDisplay == true) resultDifference.textContent = Math.abs(result1.textContent - result2.textContent);
     if (toggleDisplay == false) resultDifference.textContent = '';
     if ((result1.textContent == result2.textContent) && result1.textContent != "0") {
         resultDifference.innerHTML = '&#10004';
