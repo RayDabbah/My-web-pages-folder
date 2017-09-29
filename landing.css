@@ -110,7 +110,7 @@ a:hover .linkText{
 }
 @keyframes slideInFromTop {
     0% {
-        transform: translateX(-100%) translateY(-100%);
+        transform: translateX(-300%) translateY(-300%);
     }
     33% {
         transform: translate(-25%, 0);
