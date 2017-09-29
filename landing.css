@@ -17,9 +17,25 @@ h1{
     animation: 1s linear 0s 1 slideInFromTop;
     text-align: center;
     margin: 0 auto;
-    font-size: 4.5em;
     font-family: 'Dosis', sans-serif;
+}
+@media(max-width: 48em){
+h1{
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+}
+@media(min-width: 48em) and (max-width: 68em){
+h1{
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+}
+@media(min-width: 68em){
+h1{
+    font-size: 4.5em;
     margin-bottom: 25px;
+}
 }
 #siteName{
     animation: 2s linear 0s 1 spinIn;
